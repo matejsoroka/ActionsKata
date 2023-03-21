@@ -7,22 +7,22 @@ jobs:
     - name: welcome
       run: echo "Hello guys"
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: echo "Sonar"
   build:
+    needs: welcome
     runs-on: ubuntu-latest
     steps:
       - name: build
         run: echo "Hello guys"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: test
         run: echo "Hello guys"
   publish:
     runs-on: ubuntu-latest
+    needs: welcome
     steps:
       - name: publish
         run: echo "Hello guys"
