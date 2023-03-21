@@ -6,10 +6,19 @@ jobs:
     steps:
     - name: welcome
       run: echo "Hello guys"
-    - name: build
-      run: echo "Hello guys"
-    - name: test
-      run: echo "Hello guys"
-    - name: publish
-      run: echo "Hello guys"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "Hello guys"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "Hello guys"
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: publish
+        run: echo "Hello guys"
       
